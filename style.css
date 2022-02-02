@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #516dff;
+  color: white;
+  font-family: "Press Start 2P", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+body a {
+  color: white;
+}
+
+body h1 {
+  line-height: 1.4;
+}
+
+body .screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  -webkit-transition: margin 0.5s ease-out;
+  transition: margin 0.5s ease-out;
+}
+
+body .screen .btn {
+  border: 0;
+  background-color: white;
+  color: #516dff;
+  padding: 15px 20px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+body .screen .btn:focus {
+  outline: 0;
+}
+
+body .screen .btn:hover {
+  opacity: 0.9;
+}
+
+body .screen .choose-insect-btn {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  width: 150px;
+  height: 150px;
+}
+
+body .screen .choose-insect-btn:hover {
+  background-color: #fff;
+  color: #516dff;
+}
+
+body .screen .choose-insect-btn:active {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+body .screen .choose-insect-btn img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+body .screen .insects-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+body .screen .insects-list li {
+  margin: 10px;
+}
+
+body .screen.up {
+  margin-top: -100vh;
+}
+
+body .game-container {
+  position: relative;
+}
+
+body .game-container .insect {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+body .game-container .insect img {
+  width: 100px;
+  height: 100px;
+}
+
+body .game-container .insect.caught {
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+}
+
+body .game-container .time,
+body .game-container .score {
+  position: absolute;
+  top: 20px;
+}
+
+body .game-container .time {
+  left: 20px;
+}
+
+body .game-container .score {
+  right: 20px;
+}
+
+body .game-container .message {
+  line-height: 1.7;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 20px;
+  z-index: 100;
+  text-align: center;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -150%);
+          transform: translate(-50%, -150%);
+  -webkit-transition: -webkit-transform 0.4s ease-in;
+  transition: -webkit-transform 0.4s ease-in;
+  transition: transform 0.4s ease-in;
+  transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
+}
+
+body .game-container .message.visible {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 150%);
+          transform: translate(-50%, 150%);
+}
+/*# sourceMappingURL=style.css.map */
